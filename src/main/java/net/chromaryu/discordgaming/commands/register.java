@@ -1,7 +1,8 @@
 package net.chromaryu.discordgaming.commands;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import net.chromaryu.discordgaming.config.PlayerInfoLoader;
+import net.chromaryu.discordgaming.DiscordGaming;
+import net.chromaryu.discordgaming.config.Player;
 import net.dv8tion.jda.core.EmbedBuilder;
 import net.dv8tion.jda.core.entities.Message;
 import net.dv8tion.jda.core.entities.User;
@@ -21,7 +22,7 @@ public class register {
         f.mkdir();
         if(!charFile.exists()) {
             ObjectMapper objectMapper = new ObjectMapper();
-            objectMapper.writeValue(charFile, new PlayerInfoLoader(u));
+            objectMapper.writeValue(charFile, new Player(u));
             u.openPrivateChannel().queue(
                     privateChannel -> {
                         privateChannel.sendMessage("Loading...").queue(

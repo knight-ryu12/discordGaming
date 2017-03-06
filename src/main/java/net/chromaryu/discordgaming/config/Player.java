@@ -11,8 +11,8 @@ import java.util.Arrays;
 /**
  * Created by midgard on 17/03/06.
  */
-public class PlayerInfoLoader {
-    public PlayerInfoLoader(User u) {
+public class Player {
+    public Player(User u) {
         this.name = u.getName();
         try {
             MessageDigest md = MessageDigest.getInstance("SHA-256");
@@ -23,6 +23,9 @@ public class PlayerInfoLoader {
         }
     }
     private String name,password,userdisc;
+    public String getUser() {
+        return this.getName()+"#"+this.getUserdisc();
+    }
 
     public String getUserdisc() {
         return userdisc;
