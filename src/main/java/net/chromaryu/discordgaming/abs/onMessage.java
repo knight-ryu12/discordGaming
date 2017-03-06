@@ -26,7 +26,8 @@ public class onMessage extends ListenerAdapter {
         } else return;
         if(args.length < 2) {
             help.giveHelp(event.getAuthor());
-            logger.info("");
+            event.getChannel().sendMessage(event.getAuthor().getAsMention() + " **Check DM for info!**").queue();
+            logger.info("Command Executed help");
             return;
         }
         logger.info("Command Recieved {}",args[1]);
