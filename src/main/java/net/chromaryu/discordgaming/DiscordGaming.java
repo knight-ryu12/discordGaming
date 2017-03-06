@@ -2,6 +2,7 @@ package net.chromaryu.discordgaming;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import net.chromaryu.discordgaming.abs.onMessage;
+import net.chromaryu.discordgaming.abs.onReady;
 import net.chromaryu.discordgaming.config.ConfigLoader;
 import net.dv8tion.jda.core.AccountType;
 import net.dv8tion.jda.core.JDA;
@@ -27,7 +28,7 @@ public class DiscordGaming {
             e.printStackTrace();
         }
         JDA jda = new JDABuilder(AccountType.BOT).setToken(configLoader.getToken())
-                .addListener(new onMessage())
+                .addListener(new onMessage(),new onReady())
                 .buildBlocking();
     }
 }
