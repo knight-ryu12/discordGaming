@@ -19,7 +19,11 @@ public class onMessage extends ListenerAdapter {
         if(event.getMessage().getContent().startsWith(DiscordGaming.COMMAND_PREFIX)) {
             args = event.getMessage().getContent().split(" ");
         } else return;
-        switch (args[1]) {
+        if(args.length < 2) {
+            help.giveHelp(event.getAuthor());
+            return;
+        }
+        switch (args[1].toLowerCase()) {
             case "help":
                 help.giveHelp(event.getAuthor());
                 break;
@@ -33,6 +37,8 @@ public class onMessage extends ListenerAdapter {
                     e.printStackTrace();
                 }
                 break;
+            default:
+                help.giveHelp(event.getAuthor());
         }
     }
 }
