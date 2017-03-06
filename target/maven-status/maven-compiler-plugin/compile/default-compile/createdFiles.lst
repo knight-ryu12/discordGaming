@@ -1,7 +1,0 @@
-net/chromaryu/discordgaming/DiscordGaming.class
-net/chromaryu/discordgaming/config/ConfigLoader.class
-net/chromaryu/discordgaming/commands/dive.class
-net/chromaryu/discordgaming/commands/register.class
-net/chromaryu/discordgaming/abs/onMessage.class
-net/chromaryu/discordgaming/config/PlayerInfoLoader.class
-net/chromaryu/discordgaming/commands/help.class
