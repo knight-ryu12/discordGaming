@@ -38,7 +38,7 @@ public class onMessage extends ListenerAdapter {
                 break;
             case "register":
                 try {
-                    register.register(event.getAuthor());
+                    register.register(event.getAuthor(), event.getMessage());
                     event.getChannel().sendMessage(event.getAuthor().getAsMention() + " **Check DM for info!**").queue();
                 } catch (IOException e) {
                     e.printStackTrace();
