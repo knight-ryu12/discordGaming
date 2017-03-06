@@ -31,10 +31,6 @@ public class onMessage extends ListenerAdapter {
         }
         logger.info("Command Recieved {}",args[1]);
         switch (args[1].toLowerCase()) {
-            case "help":
-                help.giveHelp(event.getAuthor());
-                event.getChannel().sendMessage(event.getAuthor().getAsMention() + " **Check DM for info!**").queue();
-                break;
             case "dive":
                 dive.dive(event.getAuthor());
                 event.getChannel().sendMessage(event.getAuthor().getAsMention() + " **Check DM for info!**").queue();
