@@ -29,7 +29,7 @@ public class DiscordGaming {
         }
         JDA jda = new JDABuilder(AccountType.BOT).setToken(configLoader.getToken())
                 .addListener(new onMessage(),new onReady())
-                .setGame(Game.of(".dm help")
+                .setGame(Game.of(".dm help"))
                 .setAudioEnabled(false)
                 .setOnlineStatus(OnlineStatus.ONLINE)
                 .setIdle(false)
