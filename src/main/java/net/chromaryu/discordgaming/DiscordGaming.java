@@ -27,7 +27,10 @@ public class DiscordGaming {
             e.printStackTrace();
         }
         JDA jda = new JDABuilder(AccountType.BOT).setToken(configLoader.getToken())
-                .addListener(new onMessage())
+                .addListener(new onMessage())               
+                .audioEnabled(false)
+                .setGame(Game.of(".dm help")
+                .setOnlineStatus(OnlineStatus.ONLINE)
                 .buildBlocking();
     }
 }
