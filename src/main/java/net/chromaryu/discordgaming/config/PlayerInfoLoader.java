@@ -1,5 +1,6 @@
 package net.chromaryu.discordgaming.config;
 
+import net.dv8tion.jda.core.entities.User;
 import org.apache.commons.codec.binary.Hex;
 
 import java.io.UnsupportedEncodingException;
@@ -11,16 +12,25 @@ import java.util.Arrays;
  * Created by midgard on 17/03/06.
  */
 public class PlayerInfoLoader {
-    public PlayerInfoLoader(String name) {
-        this.name = name;
+    public PlayerInfoLoader(User u) {
+        this.name = u.getName();
         try {
             MessageDigest md = MessageDigest.getInstance("SHA-256");
-            this.password = Hex.encodeHexString(md.digest(name.getBytes()));
+            this.password = Hex.encodeHexString(md.digest(u.getName().getBytes()));
+            this.userdisc = u.getDiscriminator();
         } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
         }
     }
-    private String name,password;
+    private String name,password,userdisc;
+
+    public String getUserdisc() {
+        return userdisc;
+    }
+
+    public void setUserdisc(String userdisc) {
+        this.userdisc = userdisc;
+    }
 
     public String getName() {
         return name;

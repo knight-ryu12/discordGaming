@@ -18,3 +18,4 @@ hs_err_pid*
 
 # For bot
 cred.json
+/char/
