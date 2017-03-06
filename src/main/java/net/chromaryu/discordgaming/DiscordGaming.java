@@ -5,6 +5,7 @@ import com.iwebpp.crypto.TweetNaclFast;
 import net.chromaryu.discordgaming.abs.onMessage;
 import net.chromaryu.discordgaming.abs.onReady;
 import net.chromaryu.discordgaming.config.ConfigLoader;
+import net.chromaryu.discordgaming.config.LangLoader;
 import net.chromaryu.discordgaming.config.Player;
 import net.dv8tion.jda.core.AccountType;
 import net.dv8tion.jda.core.JDA;
@@ -25,11 +26,16 @@ public class DiscordGaming {
     // Static thing
     public static String COMMAND_PREFIX = ".dm";
     public static HashMap<String,Player> logined = new HashMap<>();
+    public static HashMap<String,LangLoader> languages = new HashMap<>();
+    static ClassLoader classloader = Thread.currentThread().getContextClassLoader();
     public static void main(String[] args) throws LoginException, InterruptedException, RateLimitedException {
         ObjectMapper objectMapper = new ObjectMapper();
         ConfigLoader configLoader = null;
         try {
             configLoader = objectMapper.readValue(new File("cred.json"),ConfigLoader.class);
+            //en_JS only because... yeah I gonna update later on.
+            languages.put("en_US",objectMapper.readValue(classloader.getResource("i18n/en_US.json"),LangLoader.class));
+
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -1,6 +1,7 @@
 package net.chromaryu.discordgaming.abs;
 
 import net.chromaryu.discordgaming.DiscordGaming;
+import net.chromaryu.discordgaming.api.getLang;
 import net.chromaryu.discordgaming.commands.dive;
 import net.chromaryu.discordgaming.commands.help;
 import net.chromaryu.discordgaming.commands.register;
@@ -10,6 +11,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
+import java.text.MessageFormat;
 
 /**
  * Created by midgard on 17/03/05.
@@ -26,7 +28,7 @@ public class onMessage extends ListenerAdapter {
         } else return;
         if(args.length < 2) {
             help.giveHelp(event.getAuthor());
-            event.getChannel().sendMessage(event.getAuthor().getAsMention() + " **Check DM for info!**").queue();
+            event.getChannel().sendMessage(MessageFormat.format(getLang.getLanguage("en_US").getLanguage().get("dminfo"),event.getAuthor().getAsMention())).queue();
             logger.info("Command Executed help");
             return;
         }
@@ -34,19 +36,19 @@ public class onMessage extends ListenerAdapter {
         switch (args[1].toLowerCase()) {
             case "dive":
                 dive.dive(event.getAuthor());
-                event.getChannel().sendMessage(event.getAuthor().getAsMention() + " **Check DM for info!**").queue();
+                event.getChannel().sendMessage(MessageFormat.format(getLang.getLanguage("en_US").getLanguage().get("dminfo"),event.getAuthor().getAsMention())).queue();
                 break;
             case "register":
                 try {
                     register.register(event.getAuthor(), event.getMessage());
-                    event.getChannel().sendMessage(event.getAuthor().getAsMention() + " **Check DM for info!**").queue();
+                    event.getChannel().sendMessage(MessageFormat.format(getLang.getLanguage("en_US").getLanguage().get("dminfo"),event.getAuthor().getAsMention())).queue();
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
                 break;
             default:
                 help.giveHelp(event.getAuthor());
-                event.getChannel().sendMessage(event.getAuthor().getAsMention() + " **Check DM for info!**").queue();
+                event.getChannel().sendMessage(MessageFormat.format(getLang.getLanguage("en_US").getLanguage().get("dminfo"),event.getAuthor().getAsMention())).queue();
         }
     }
 }

@@ -30,7 +30,7 @@ public class register {
                                 
                                 EmbedBuilder eb = new EmbedBuilder();
                                 eb.setColor(new Color(255, 102, 25));
-                                eb.addField("Welcome to Dungeon Master!", "Hello. Your character have been made!", true);
+                                eb.addField("Welcome to Dungeon Master!", "Hello. Your character has been created!", true);
                                 eb.addField("Password", "Your current password is your current username **" + u.getName() + "**!", true);
                                 eb.setTitle("Dungeon Master Notice", null);
                                 eb.setFooter("Done in " + m.getCreationTime().until(loading.getCreationTime(), ChronoUnit.MILLIS) + "ms", null);
