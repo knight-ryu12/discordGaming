@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9841fd1c-0615-46e4-b37e-6abbc9aa2473" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -63,7 +64,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="342">
@@ -130,7 +131,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ConfigLoader.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ConfigLoader.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/chromaryu/discordgaming/config/ConfigLoader.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="36">
@@ -183,10 +184,10 @@
         <option value="$PROJECT_DIR$/src/main/java/net/chromaryu/discordgaming/abs/onMessage.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/char/Chromaryu.json" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/main/java/net/chromaryu/discordgaming/config/PlayerInfoLoader.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/chromaryu/discordgaming/commands/register.java" />
         <option value="$PROJECT_DIR$/circle.yml" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -226,6 +227,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="DiscordGameProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DiscordGameProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DiscordGameProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="target" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -375,6 +390,7 @@
     <property name="nodejs_interpreter_path" value="/usr/bin/node" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="js-jscs-nodeInterpreter" value="/usr/bin/node" />
+    <property name="prop_add_unversioned_files" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -918,7 +934,7 @@
       <option name="presentableId" value="Default" />
       <updated>1488716068970</updated>
       <workItem from="1488716073195" duration="4078000" />
-      <workItem from="1488762416904" duration="3937000" />
+      <workItem from="1488762416904" duration="4032000" />
     </task>
     <task id="LOCAL-00001" summary="Inital Commit">
       <created>1488764253311</created>
@@ -941,11 +957,18 @@
       <option name="project" value="LOCAL" />
       <updated>1488765989601</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Development branch&#10;">
+      <created>1488766371355</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1488766371356</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8015000" />
+    <option name="totallyTimeSpent" value="8110000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="31" width="960" height="1049" extended-state="4" />
@@ -1010,7 +1033,8 @@
     <MESSAGE value="Inital Commit" />
     <MESSAGE value="Update register.java for notificate password, one time only." />
     <MESSAGE value="CircleCi to use openjdk8" />
-    <option name="LAST_COMMIT_MESSAGE" value="CircleCi to use openjdk8" />
+    <MESSAGE value="Development branch&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Development branch&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1153,14 +1177,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" column="9" lean-forward="false" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/char/Chromaryu.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1250,6 +1266,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
           <caret line="2" column="3" lean-forward="false" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="19" column="9" lean-forward="false" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
           <folding />
         </state>
       </provider>
