@@ -7,6 +7,8 @@ import net.chromaryu.discordgaming.config.ConfigLoader;
 import net.dv8tion.jda.core.AccountType;
 import net.dv8tion.jda.core.JDA;
 import net.dv8tion.jda.core.JDABuilder;
+import net.dv8tion.jda.core.OnlineStatus;
+import net.dv8tion.jda.core.entities.Game;
 import net.dv8tion.jda.core.exceptions.RateLimitedException;
 
 import javax.security.auth.login.LoginException;
@@ -31,7 +33,7 @@ public class DiscordGaming {
                 .addListener(new onMessage(),new onReady())
                 .setGame(Game.of(".dm help"))
                 .setAudioEnabled(false)
-                .setOnlineStatus(OnlineStatus.ONLINE)
+                .setStatus(OnlineStatus.ONLINE)
                 .setIdle(false)
                 .buildBlocking();
     }
