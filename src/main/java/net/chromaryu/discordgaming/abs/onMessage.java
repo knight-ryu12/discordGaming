@@ -40,7 +40,7 @@ public class onMessage extends ListenerAdapter {
                 break;
             case "register":
                 try {
-                    register.register(event.getAuthor(), event.getMessage());
+                    register.tryRegister(event.getAuthor(), event.getMessage());
                     event.getChannel().sendMessage(MessageFormat.format(getLang.getLanguage("en_US").getLanguage().get("dminfo"),event.getAuthor().getAsMention())).queue();
                 } catch (IOException e) {
                     e.printStackTrace();
