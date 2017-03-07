@@ -17,7 +17,7 @@ RYArrowsmih | Developer / Bug reporter
 Field | More info
 :--- | :---
 API Name | JDA (Java Discord API)
-API Version | 3.0.BETA2_143
+API Version | 3.0.BETA2_144
 Bot Version | 1.0-SNAPSHOT
 Bot Invite | Coming soon
 Testing Guild | Coming soon

@@ -18,7 +18,7 @@
         <dependency>
             <groupId>net.dv8tion</groupId>
             <artifactId>JDA</artifactId>
-            <version>3.0.BETA2_143</version>
+            <version>3.0.BETA2_144</version>
         </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
