@@ -27,7 +27,7 @@ public class onMessage extends ListenerAdapter {
 
         } else return;
         if(args.length < 2) {
-            help.giveHelp(event.getAuthor());
+            help.giveHelp(event.getAuthor(),event.getMessage());
             event.getChannel().sendMessage(MessageFormat.format(getLang.getLanguage("en_US").getLanguage().get("dminfo"),event.getAuthor().getAsMention())).queue();
             logger.info("Command Executed help");
             return;
@@ -47,7 +47,7 @@ public class onMessage extends ListenerAdapter {
                 }
                 break;
             default:
-                help.giveHelp(event.getAuthor());
+                help.giveHelp(event.getAuthor(),event.getMessage());
                 event.getChannel().sendMessage(MessageFormat.format(getLang.getLanguage("en_US").getLanguage().get("dminfo"),event.getAuthor().getAsMention())).queue();
         }
     }
