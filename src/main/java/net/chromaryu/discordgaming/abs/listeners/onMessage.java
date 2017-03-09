@@ -1,4 +1,4 @@
-package net.chromaryu.discordgaming.abs;
+package net.chromaryu.discordgaming.abs.listeners;
 
 import net.chromaryu.discordgaming.DiscordGaming;
 import net.chromaryu.discordgaming.api.getLang;

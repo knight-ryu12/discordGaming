@@ -1,9 +1,8 @@
 package net.chromaryu.discordgaming;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.iwebpp.crypto.TweetNaclFast;
-import net.chromaryu.discordgaming.abs.onMessage;
-import net.chromaryu.discordgaming.abs.onReady;
+import net.chromaryu.discordgaming.abs.listeners.onMessage;
+import net.chromaryu.discordgaming.abs.listeners.onReady;
 import net.chromaryu.discordgaming.config.ConfigLoader;
 import net.chromaryu.discordgaming.config.LangLoader;
 import net.chromaryu.discordgaming.config.Player;

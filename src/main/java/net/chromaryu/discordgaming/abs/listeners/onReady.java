@@ -1,4 +1,4 @@
-package net.chromaryu.discordgaming.abs;
+package net.chromaryu.discordgaming.abs.listeners;
 
 import net.dv8tion.jda.core.events.ReadyEvent;
 import net.dv8tion.jda.core.events.guild.GuildJoinEvent;
