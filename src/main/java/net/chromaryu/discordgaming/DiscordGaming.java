@@ -2,7 +2,7 @@ package net.chromaryu.discordgaming;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import net.chromaryu.discordgaming.abs.listener.EventListener;
-import net.chromaryu.discordgaming.api.CommandInitalizer;
+import net.chromaryu.discordgaming.api.dmCommandInitalizer;
 import net.chromaryu.discordgaming.config.ConfigLoader;
 import net.chromaryu.discordgaming.config.LangLoader;
 import net.chromaryu.discordgaming.config.Player;
@@ -69,6 +69,6 @@ public class DiscordGaming {
     }
     public static void onInit(ReadyEvent event) {
         int ready = num.incrementAndGet();
-        CommandInitalizer.initCommands();
+        dmCommandInitalizer.initCommands();
     }
 }

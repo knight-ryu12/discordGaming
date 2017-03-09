@@ -1,14 +1,14 @@
 package net.chromaryu.discordgaming.api;
 
 import net.chromaryu.discordgaming.abs.CommandRegistry;
-import net.chromaryu.discordgaming.commands.dive;
+import net.chromaryu.discordgaming.commands.dm.dive;
 import net.chromaryu.discordgaming.commands.help;
-import net.chromaryu.discordgaming.commands.register;
+import net.chromaryu.discordgaming.commands.dm.register;
 
 /**
  * Created by midgard on 17/03/09.
  */
-public class CommandInitalizer {
+public class dmCommandInitalizer {
     public static void initCommands() {
         CommandRegistry.registerCommand("dive",new dive());
         CommandRegistry.registerCommand("help",new help());

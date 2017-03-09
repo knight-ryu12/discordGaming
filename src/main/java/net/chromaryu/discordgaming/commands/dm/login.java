@@ -1,4 +1,4 @@
-package net.chromaryu.discordgaming.commands;
+package net.chromaryu.discordgaming.commands.dm;
 
 import net.chromaryu.discordgaming.DiscordGaming;
 import net.chromaryu.discordgaming.config.Player;

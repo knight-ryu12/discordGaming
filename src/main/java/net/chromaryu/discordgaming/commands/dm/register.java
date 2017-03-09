@@ -1,4 +1,4 @@
-package net.chromaryu.discordgaming.commands;
+package net.chromaryu.discordgaming.commands.dm;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import net.chromaryu.discordgaming.DiscordGaming;
