@@ -24,7 +24,7 @@ public class help extends Command {
                                 eb.setColor(new Color(255, 135, 24));
                                 eb.setTitle("Dungeon Master help menu", null);
                                 eb.addField("if you can help me...", "", false);
-                                eb.setFooter("Done in " + invoker.getUser().getCreationTime().until(privateChannel.getCreationTime(), ChronoUnit.MILLIS) + "ms", null);
+                                eb.setFooter("Done in " + message.getCreationTime().until(privateChannel.getCreationTime(), ChronoUnit.MILLIS) + "ms", null);
                                 privateChannel.editMessage(eb.build()).queue();
                                 });
         });

@@ -35,7 +35,7 @@ public class register extends Command {
                                 eb.addField("Welcome to Dungeon Master!", "Hello. Your character has been created!", true);
                                 eb.addField("Password", "Your current password is your current username **" + u.getName() + "**!", true);
                                 eb.setTitle("Dungeon Master Notice", null);
-                                eb.setFooter("Done in " + invoker.getUser().getCreationTime().until(loading.getCreationTime(), ChronoUnit.MILLIS) + "ms", null);
+                                eb.setFooter("Done in " + message.getCreationTime().until(loading.getCreationTime(), ChronoUnit.MILLIS) + "ms", null);
                                 loading.editMessage(eb.build()).queue();
                             }));
 

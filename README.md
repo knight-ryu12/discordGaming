@@ -5,10 +5,11 @@
 
 ##Contributors:
 
-Name | Roles
-:---: | :---:
-knight-ryu12 | Lead Developer / Original Code
-RYArrowsmih | Developer / Bug reporter
+Name | Roles | WebSite
+:---: | :---: | :---:
+knight-ryu12 | Lead Developer / Original Code | https://chromaryu.net
+RYArrowsmih | Developer / Bug reporter | null
+Frederik Ar. Mikkelsen (aka Fred)| For Command System | null
 
 ---
 

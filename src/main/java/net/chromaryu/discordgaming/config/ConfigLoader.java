@@ -5,6 +5,15 @@ package net.chromaryu.discordgaming.config;
  */
 public class ConfigLoader {
     private String token;
+    private String commandPrefix;
+
+    public String getCommandPrefix() {
+        return commandPrefix;
+    }
+
+    public void setCommandPrefix(String commandPrefix) {
+        this.commandPrefix = commandPrefix;
+    }
 
     public String getToken() {
         return token;
