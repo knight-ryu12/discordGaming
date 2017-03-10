@@ -61,7 +61,7 @@ public class DiscordGaming {
         JDABuilder builder = new JDABuilder(AccountType.BOT)
                 .addListener(new EventListener(0x111))
                 .setAudioEnabled(false)
-                .setGame(Game.of(".dm help"))
+                .setGame(Game.of("!!help"))
                 .setIdle(false)
                 .setToken(cl.getToken())
                 .setStatus(OnlineStatus.ONLINE);

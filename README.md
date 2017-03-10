@@ -18,7 +18,7 @@ Frederik Ar. Mikkelsen (aka Fred)| For Command System | null
 Field | More info
 :--- | :---
 API Name | JDA (Java Discord API)
-API Version | 3.0.BETA2_144
+API Version | 3.0.BETA2_147
 Bot Version | 1.0-SNAPSHOT
 Bot Invite | Coming soon
 Testing Guild | Coming soon
