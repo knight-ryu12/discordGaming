@@ -1,19 +1,18 @@
 package net.chromaryu.discordgaming.commands.dm;
 
 import net.chromaryu.discordgaming.DiscordGaming;
+import net.chromaryu.discordgaming.abs.Command;
+import net.chromaryu.discordgaming.abs.PrivateChatCommand;
 import net.chromaryu.discordgaming.config.Player;
+import net.dv8tion.jda.core.entities.*;
 
 /**
  * Created by midgard on 17/03/06.
  */
-public class login {
-    public static void trylogin(Player player) {
-        if(!DiscordGaming.logined.containsKey(player.getUser())) {
-            DiscordGaming.logined.putIfAbsent(player.getUser(), player);
-            //Login succeeded
+public class login extends PrivateChatCommand {
 
-            return;
-        }
-        //Nope.
+    @Override
+    public void onInvoke(PrivateChannel pc, Message m, User u, String[] args) {
+        pc.sendMessage("test!").queue();
     }
 }

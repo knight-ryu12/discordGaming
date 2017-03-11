@@ -8,7 +8,6 @@ import java.util.HashMap;
 public class CommandRegistry {
 
     private static HashMap<String, CommandEntry> registry = new HashMap<>();
-
     public static void registerCommand(String name, Command command) {
         CommandEntry entry = new CommandEntry(command, name);
         registry.put(name, entry);

@@ -4,10 +4,7 @@ package net.chromaryu.discordgaming.abs;
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 import net.dv8tion.jda.core.Permission;
-import net.dv8tion.jda.core.entities.Guild;
-import net.dv8tion.jda.core.entities.Member;
-import net.dv8tion.jda.core.entities.Message;
-import net.dv8tion.jda.core.entities.TextChannel;
+import net.dv8tion.jda.core.entities.*;
 import net.dv8tion.jda.core.utils.PermissionUtil;
 import org.slf4j.LoggerFactory;
 
@@ -18,19 +15,27 @@ public class CommandManager {
     private static final org.slf4j.Logger log = LoggerFactory.getLogger(CommandManager.class);
 
     public static int commandsExecuted = 0;
-    public static void prefixCalled(Command invoked, Guild guild, TextChannel channel, Member invoker, Message message) {
+    public static void prefixCalled(Command invoked, Guild guild, TextChannel channel, Member invoker, Message message,boolean isprivate) {
         String[] args = commandToArguments(message.getRawContent());
         commandsExecuted++;
         // Will add something here lol.
-        //if(invoked instanceof ICommand)
+        //if(invoked instanceof ICommand
+            try {
+                invoked.onInvoke(guild, channel, invoker, message, args, isprivate);
+            } catch (Exception e) {
+                //TextUtils.handleException(e, channel, invoker);
+                return;
+            }
+
+    }
+    public static void prefixCalled(PrivateChatCommand invoked, PrivateChannel pc, User invoker, Message message) {
         try {
-            invoked.onInvoke(guild, channel, invoker, message, args);
+            invoked.onInvoke(pc,message,invoker,commandToArguments(message.getRawContent()));
         } catch (Exception e) {
-            //TextUtils.handleException(e, channel, invoker);
+            return;
         }
 
     }
-
     private static String[] commandToArguments(String cmd) {
         ArrayList<String> a = new ArrayList<>();
         int argi = 0;

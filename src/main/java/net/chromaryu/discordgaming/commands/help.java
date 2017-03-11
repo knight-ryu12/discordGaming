@@ -12,7 +12,7 @@ import java.time.temporal.ChronoUnit;
  */
 public class help extends Command {
     @Override
-    public void onInvoke(Guild guild, TextChannel channel, Member invoker, Message message, String[] args) {
+    public void onInvoke(Guild guild, TextChannel channel, Member invoker, Message message, String[] args, boolean ip) {
         invoker.getUser().openPrivateChannel().queue(
                 pc -> {
                     pc.sendMessage("Loading").queue(

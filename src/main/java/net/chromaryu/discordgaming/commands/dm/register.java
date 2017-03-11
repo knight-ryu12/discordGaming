@@ -22,7 +22,7 @@ import java.time.temporal.ChronoUnit;
  */
 public class register extends Command {
     @Override
-    public void onInvoke(Guild guild, TextChannel channel, Member invoker, Message message, String[] args) {
+    public void onInvoke(Guild guild, TextChannel channel, Member invoker, Message message, String[] args,boolean ip) {
         User u = invoker.getUser();
         File f = new File("char/");
         Player player;
