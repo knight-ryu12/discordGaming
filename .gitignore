@@ -17,6 +17,8 @@
 hs_err_pid*
 
 # For bot
+/default.config.yml
+/config.yml
 cred.json
 /char/
 /target/
