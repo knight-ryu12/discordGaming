@@ -17,9 +17,9 @@
 hs_err_pid*
 
 # For bot
+/*.yml
 cred.json
 /char/
 /target/
 /.idea/
 /DiscordGameProject.iml
-/config.yml
