@@ -24,7 +24,10 @@ public class Player {
             //this.password = Hex.encodeHexString(md.digest());//
             this.userdisc = u.getDiscriminator();
     }
-    public Player() {
+    public Player(User u) {
+        this.name = u.getName();
+        this.password = DigestUtils.sha512Hex("password");
+        this.userdisc = u.getDiscriminator();
     }
     private String name,password,userdisc;
     /*public String getUser() {

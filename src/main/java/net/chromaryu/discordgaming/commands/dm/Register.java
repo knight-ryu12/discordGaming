@@ -20,7 +20,7 @@ import java.time.temporal.ChronoUnit;
 /**
  * Created by midgard on 17/03/06.
  */
-public class register extends Command {
+public class Register extends Command {
     @Override
     public void onInvoke(Guild guild, TextChannel channel, Member invoker, Message message, String[] args,boolean ip) {
         User u = invoker.getUser();
@@ -40,17 +40,16 @@ public class register extends Command {
                 objectMapper.writeValue(charFile, player);
 
             u.openPrivateChannel().queue(
-                    privateChannel -> privateChannel.sendMessage("Loading...").queue(
-                            loading -> {
+                    privateChannel -> privateChannel.sendMessage(new EmbedBuilder().setTitle("Loading...", "").build()).queue(
+                            loading ->
 
-                                EmbedBuilder eb = new EmbedBuilder();
-                                eb.setColor(new Color(255, 102, 25));
-                                eb.addField("Welcome to Dungeon Master!", "Hello. Your character has been created!", true);
-                                eb.addField("Password", "Your current password is **" + rand + "**! Remember to change them to strong password!", true);
-                                eb.setTitle("Dungeon Master Notice", null);
-                                eb.setFooter("Done in " + message.getCreationTime().until(loading.getCreationTime(), ChronoUnit.MILLIS) + "ms", null);
-                                loading.editMessage(eb.build()).queue();
-                            }));
+                                loading.editMessage(new EmbedBuilder()
+                                        .setColor(new Color(255, 102, 25))
+                                        .setFooter("Done in: " + message.getCreationTime().until(loading.getCreationTime(), ChronoUnit.MILLIS) + "ms", "")
+                                        .setTitle("Dungeon Master Notice", "")
+                                        .addField("Welcome to Dungeon Master!", "Your character has now been created!", true)
+                                        .addField("Password", "Your current password is `" + rand + "` make sure to change it to a stronger password!", true)
+                                        .build()).queue()));
 
         } catch (IOException | NoSuchAlgorithmException e) {
             e.printStackTrace();

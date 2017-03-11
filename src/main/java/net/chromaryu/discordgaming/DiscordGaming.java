@@ -52,7 +52,7 @@ public class DiscordGaming {
         //el = new EventListener(0x111);
         /*JDA jda = new JDABuilder(AccountType.BOT).setToken(cl.getToken())
                 .addListener(new onMessage(),new onReady())
-                .setGame(Game.of(".dm help"))
+                .setGame(Game.of(".dm Help"))
                 .setAudioEnabled(false)
                 .setStatus(OnlineStatus.ONLINE)
                 .setIdle(false)
@@ -61,7 +61,7 @@ public class DiscordGaming {
         JDABuilder builder = new JDABuilder(AccountType.BOT)
                 .addListener(new EventListener(0x111))
                 .setAudioEnabled(false)
-                .setGame(Game.of("!!help"))
+                .setGame(Game.of("!!Help"))
                 .setIdle(false)
                 .setToken(cl.getToken())
                 .setStatus(OnlineStatus.ONLINE);
