@@ -8,8 +8,8 @@ import net.chromaryu.discordgaming.config.Player;
  */
 public class Login {
     public static void trylogin(Player player) {
-        if(!DiscordGaming.logined.containsKey(player.getUser())) {
-            DiscordGaming.logined.putIfAbsent(player.getUser(), player);
+        if(!DiscordGaming.logined.containsKey(player.getUserdisc())) {
+            DiscordGaming.logined.putIfAbsent(player.getUserdisc(), player);
             //Login succeeded
 
             return;
