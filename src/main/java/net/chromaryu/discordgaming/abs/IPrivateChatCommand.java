@@ -4,6 +4,8 @@ import net.dv8tion.jda.core.entities.Message;
 import net.dv8tion.jda.core.entities.PrivateChannel;
 import net.dv8tion.jda.core.entities.User;
 
+import java.io.IOException;
+
 /**
  * Created by midgard on 17/03/11.
  */

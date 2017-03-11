@@ -24,11 +24,13 @@ public class Player {
             //this.password = Hex.encodeHexString(md.digest());//
             this.userdisc = u.getDiscriminator();
     }
+    public Player() {
+    }
     private String name,password,userdisc;
-    public String getUser() {
+    /*public String getUser() {
         return this.getName()+"#"+this.getUserdisc();
     }
-
+    public String setUser(String) { this.user = }*/
     public String getUserdisc() {
         return userdisc;
     }
