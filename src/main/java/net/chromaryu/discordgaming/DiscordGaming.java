@@ -39,7 +39,7 @@ public class DiscordGaming {
 
     public static void main(String[] args) throws LoginException, InterruptedException, RateLimitedException, FileNotFoundException {
         ObjectMapper objectMapper = new ObjectMapper();
-        cl = y.loadAs(new FileInputStream(new File("config.yml")), ConfigLoader.class);
+        cl = y.loadAs(new FileInputStream(new File("creds.yml")), ConfigLoader.class);
         //ConfigLoader configLoader = null;
         try {
             //configLoader = objectMapper.readValue(new File("cred.json"),ConfigLoader.class);

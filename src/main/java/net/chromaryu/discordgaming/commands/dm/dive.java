@@ -1,6 +1,7 @@
 package net.chromaryu.discordgaming.commands.dm;
 
 import net.chromaryu.discordgaming.abs.Command;
+import net.chromaryu.discordgaming.dungeon.DungeonGenerator;
 import net.dv8tion.jda.core.entities.*;
 
 import java.security.NoSuchAlgorithmException;
@@ -25,7 +26,10 @@ public class dive extends Command {
                                     e.printStackTrace();
                                 }
                                 assert random != null;
-                                privchan.editMessage("You dived to dungeon dungeonID:"+random.nextLong()).queue();
+                                long seed = random.nextLong();
+                                DungeonGenerator dg = new DungeonGenerator(random,seed,10);
+                                dg.start();
+                                privchan.editMessage("You dived to dungeon dungeonID:"+seed).queue();
                             }
                     );
                 }
